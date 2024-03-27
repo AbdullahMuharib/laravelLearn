@@ -2,9 +2,21 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
-    return view('welcome');
+     return view('welcome');
+
+    //$select=DB::select('select * from users where id = ?', [1]);
+
+    // $insert=DB::insert('insert into users (name,email,password) values ( ?, ?, ?)', [ 'Dev','Mohammed @gmail.com',1234]);
+
+    //$update =DB::update('update users set email = "Dev@gmail.com" where id = ?', [2]);
+
+   // $delete =DB::delete('delete from users where id = 2');
+
+   //dd($delete);
+
 });
 
 Route::get('/dashboard', function () {
